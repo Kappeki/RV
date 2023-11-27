@@ -26,7 +26,7 @@ if __name__ == '__main__':
 
     # Prvi deo zadatka
     # _, mask_coins = cv2.threshold(img_gray, 90, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
-    _, mask_coins = cv2.threshold(img_gray, 220, 255, cv2.THRESH_BINARY_INV)
+    _, mask_coins = cv2.threshold(img_gray, 90, 255, cv2.THRESH_BINARY_INV)
     mask_filtered = cv2.morphologyEx(mask_coins, cv2.MORPH_CLOSE, cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (5, 5)))
     plt.subplot(222)
     plt.imshow(mask_coins, cmap='gray')
